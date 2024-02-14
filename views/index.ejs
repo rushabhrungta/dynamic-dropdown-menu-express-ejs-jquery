@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+<div class="custom-dropdown">
+    <button class="custom-dropdown-btn">Select an Option</button>
+    <div class="custom-dropdown-menu" id="customDropdown">
+      <% dataArray.forEach(data => { %>
+        <a href="#" data-option="<%= data.option %>"><%= data.option %></a>
+      <% }); %>
+    </div>
+  </div>
+  <div>
+    <label for="inputField1">Input Field 1:</label>
+    <input type="text" id="inputField1" readonly>
+  </div>
+  
+  <div>
+    <label for="inputField2">Input Field 2:</label>
+    <input type="text" id="inputField2" readonly>
+  </div>
+  
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/js/dropdown.js"></script>
+<%- include("partials/footer.ejs") %>
